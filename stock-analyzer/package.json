@@ -1,0 +1,19 @@
+{
+  "name": "signal-lab",
+  "version": "1.0.0",
+  "description": "ระบบวิเคราะห์หุ้น/สินทรัพย์: RSI Divergence, CDC ActionZone (EMA 12/26), Elliott Wave หลาย Timeframe, ข่าว, จิตวิทยาตลาด และ Backtest พร้อมการพิสูจน์ทางสถิติ",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "HOST=0.0.0.0 node server.js",
+    "test": "node --test test/*.test.js",
+    "check": "node scripts/security-check.js && node --test test/*.test.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
