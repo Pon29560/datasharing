@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Signal Lab</title>
+  <meta name="description" content="วิเคราะห์หุ้น/สินทรัพย์ด้วย CDC ActionZone, RSI Divergence, Elliott Wave หลาย Timeframe, ข่าว และจิตวิทยาตลาด พร้อม Backtest ที่พิสูจน์ทางสถิติ">
+  <meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Signal Lab">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/icon.svg" alt="" width="28" height="28">
+      <div><strong>Signal Lab</strong><span>วิเคราะห์ · พิสูจน์ · ตัดสินใจ</span></div>
+    </div>
+    <form id="searchForm" class="search" autocomplete="off" role="search">
+      <label for="symbol" class="sr-only">สัญลักษณ์</label>
+      <input id="symbol" name="symbol" placeholder="สัญลักษณ์ เช่น AAPL, PTT.BK, BTC-USD" maxlength="24" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="search">
+      <button type="submit" class="primary">วิเคราะห์</button>
+      <button type="button" id="csvBtn" class="ghost" title="นำเข้าไฟล์ CSV (Date, Open, High, Low, Close, Volume)">CSV</button>
+      <input type="file" id="csvFile" accept=".csv,text/csv" hidden>
+    </form>
+    <button type="button" id="themeBtn" class="ghost icon" aria-label="สลับธีมสว่าง/มืด">◐</button>
+    <div id="quick" class="quick" aria-label="สัญลักษณ์ล่าสุด"></div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="ส่วนการวิเคราะห์">
+    <button role="tab" data-tab="summary" aria-controls="tab-summary">สรุป &amp; แผนเทรด</button>
+    <button role="tab" data-tab="chart" aria-controls="tab-chart">กราฟ</button>
+    <button role="tab" data-tab="elliott" aria-controls="tab-elliott">Elliott Wave</button>
+    <button role="tab" data-tab="news" aria-controls="tab-news">ข่าว &amp; ปัจจัย</button>
+    <button role="tab" data-tab="psych" aria-controls="tab-psych">จิตวิทยาตลาด</button>
+    <button role="tab" data-tab="backtest" aria-controls="tab-backtest">Backtest &amp; พิสูจน์</button>
+    <button role="tab" data-tab="scan" aria-controls="tab-scan">สแกน</button>
+    <button role="tab" data-tab="principles" aria-controls="tab-principles">หลักการ</button>
+  </nav>
+
+  <main>
+    <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+    <section id="asset" class="asset card" hidden></section>
+    <section id="tab-summary" class="panel" role="tabpanel"></section>
+    <section id="tab-chart" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-elliott" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-news" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-psych" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-backtest" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-scan" class="panel" role="tabpanel" hidden></section>
+    <section id="tab-principles" class="panel" role="tabpanel" hidden></section>
+  </main>
+
+  <footer class="foot">
+    เพื่อการศึกษาและประกอบการตัดสินใจเท่านั้น ไม่ใช่คำแนะนำการลงทุน · ผลในอดีตไม่รับประกันอนาคต · ราคา: Yahoo Finance · ข่าว: Google News / Yahoo Finance RSS
+  </footer>
+</body>
+</html>
